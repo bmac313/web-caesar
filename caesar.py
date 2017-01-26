@@ -7,8 +7,3 @@ def encrypt(message, rot):
 def user_input_is_valid(cl_args):
 	pass
 	
-def main():
-	pass
-	
-if __name__ == "__main__":
-	main()
