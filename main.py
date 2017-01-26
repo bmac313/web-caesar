@@ -24,6 +24,7 @@ class MainHandler(webapp2.RequestHandler):
 		<!DOCTYPE html>
 		<html>
 			<head>
+				<title>Caesar cipher</title>
 			</head>
 			<body>
 				<h1>Enter some text to encrypt:</h1>
