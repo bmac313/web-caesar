@@ -1,9 +1,16 @@
 import sys
-from helpers import rotate_char
+from helpers import rotate_character
 
 def encrypt(message, rot):
-	pass
+	new_message = ""
+	for character in message:
+		new_message += rotate_character(character, rot)
+		
+	return new_message
 	
 def user_input_is_valid(cl_args):
-	pass
+	if cl_args != "":
+		return True
+	
+	return False
 	
