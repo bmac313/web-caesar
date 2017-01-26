@@ -45,11 +45,14 @@ class MainHandler(webapp2.RequestHandler):
 		
 class SubmitHandler(webapp2.RequestHandler):
 	def post(self):
+		page_content2 = ""
 		if caesar.user_input_is_valid(self.request.get("message")):
 			encrypted_message = caesar.encrypt(self.request.get("message"), 13)
-			self.response.write("<p>" + encrypted_message +"</p>")
+			page_content2 += "<p>" + encrypted_message +"</p>"
 		else:
-			self.response.write("<p>Error! Please type something before submitting!")
+			page_content2 += "<p>Error! Please type something before submitting!"
+		page_content2 += "<a href='..'><button>Go back</button></a>"
+		self.response.write(page_content2)
 		#self.redirect('/')
 		
 
